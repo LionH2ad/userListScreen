@@ -18,6 +18,18 @@ class MainActivity : AppCompatActivity() {
             User("Alice", "alice@example.com"),
             User("Bob", "bob@example.com"),
             User("Charlie", "charlie@example.com"),
+            User("Diana", "diana@example.com"),
+            User("Alice", "alice@example.com"),
+            User("Bob", "bob@example.com"),
+            User("Charlie", "charlie@example.com"),
+            User("Diana", "diana@example.com"),
+            User("Alice", "alice@example.com"),
+            User("Bob", "bob@example.com"),
+            User("Charlie", "charlie@example.com"),
+            User("Diana", "diana@example.com"),
+            User("Alice", "alice@example.com"),
+            User("Bob", "bob@example.com"),
+            User("Charlie", "charlie@example.com"),
             User("Diana", "diana@example.com")
         )
 

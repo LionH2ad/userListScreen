@@ -1,5 +1,6 @@
 package com.example.userListScreen
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -18,6 +19,7 @@ import com.example.userListScreen.databinding.ItemUserBinding
  * */
 class UserAdapter(private val userList: List<User>) :
     RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
+        val TAG = this::class.simpleName
 
     /**
      * - 역할 : 개별 항목 뷰를 보관하는 역할을 하며, 뷰 객체들을 재활용(recycle)할 수 있도록 관리합니다.
@@ -42,6 +44,7 @@ class UserAdapter(private val userList: List<User>) :
      * 2. 생성된 binding 객체를 이용해 새로운 UserViewHolder 인스턴스를 생성하고 반환합니다.
      * */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
+        Log.d(TAG, "onCreateViewHolder() parent : $parent")
         val binding = ItemUserBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return UserViewHolder(binding)
     }
@@ -53,6 +56,7 @@ class UserAdapter(private val userList: List<User>) :
      * 2. holder.binding.apply { ... } 블록을 사용 하여 뷰 바인딩 객체에 쉽게 접근 하여 각각 매칭 해줍니다.
      * */
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
+        Log.d(TAG, "onBindViewHolder() holder : $holder position : $position")
         val user = userList[position]
         holder.binding.apply {
             tvName.text = user.name
